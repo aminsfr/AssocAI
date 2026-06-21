@@ -1,0 +1,28 @@
+<li class="nav-list-item">
+  <button id="theme-toggle" class="btn js-toggle-dark-mode" style="margin-top: 8px;">
+    🌙 Dark mode
+  </button>
+</li>
+
+<script>
+  const toggleDarkMode = document.querySelector('.js-toggle-dark-mode');
+
+  // Apply saved preference on load
+  const savedTheme = localStorage.getItem('jtd-theme');
+  if (savedTheme) {
+    jtd.setTheme(savedTheme);
+    toggleDarkMode.textContent = savedTheme === 'dark' ? '☀️ Light mode' : '🌙 Dark mode';
+  }
+
+  jtd.addEvent(toggleDarkMode, 'click', function () {
+    if (jtd.getTheme() === 'dark') {
+      jtd.setTheme('light');
+      localStorage.setItem('jtd-theme', 'light');
+      toggleDarkMode.textContent = '🌙 Dark mode';
+    } else {
+      jtd.setTheme('dark');
+      localStorage.setItem('jtd-theme', 'dark');
+      toggleDarkMode.textContent = '☀️ Light mode';
+    }
+  });
+</script>
