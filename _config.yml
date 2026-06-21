@@ -1,0 +1,20 @@
+title: Associative AI
+description: A practical guide to building with AI APIs, for developers who've used ChatGPT but never built with the API directly.
+remote_theme: just-the-docs/just-the-docs
+color_scheme: light  # just-the-docs supports a dark/light toggle
+
+collections:
+  articles:
+    output: true
+    permalink: /articles/:path/
+
+defaults:
+  - scope:
+      path: ""
+      type: "articles"
+    values:
+      parent: Articles
+      layout: default
+
+plugins:
+  - jekyll-remote-theme
