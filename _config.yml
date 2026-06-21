@@ -2,21 +2,22 @@ title: Associative AI
 description: A practical guide to building with AI APIs, for developers who've used ChatGPT but never built with the API directly.
 remote_theme: just-the-docs/just-the-docs
 color_scheme: light
-baseurl: "/AssocAI" # <-- change this to match your repo name exactly
+baseurl: "/AssocAI"
 url: ""
 
+# Jekyll collection: every file in _articles/ becomes a page under /articles/
 collections:
   articles:
     output: true
     permalink: /articles/:path/
 
-defaults:
-  - scope:
-      path: ""
-      type: "articles"
-    values:
-      parent: Articles
-      layout: default
+# Just the Docs collection settings — this is what makes "Articles" a
+# foldable drawer in the sidebar with all articles nested underneath
+just_the_docs:
+  collections:
+    articles:
+      name: Articles
+      nav_fold: true   # adds the expand/collapse arrow
 
 plugins:
   - jekyll-remote-theme
