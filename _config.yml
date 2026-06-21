@@ -2,8 +2,6 @@ title: Associative AI
 description: A practical guide to building with AI APIs, for developers who've used ChatGPT but never built with the API directly.
 remote_theme: just-the-docs/just-the-docs
 color_scheme: light
-baseurl: "/AssocAI"
-url: ""
 
 # Jekyll collection: every file in _articles/ becomes a page under /articles/
 collections:
@@ -17,7 +15,7 @@ just_the_docs:
   collections:
     articles:
       name: Articles
-      nav_fold: true   # adds the expand/collapse arrow
+      nav_fold: true # adds the expand/collapse arrow
 
 plugins:
   - jekyll-remote-theme
