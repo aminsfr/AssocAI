@@ -19,3 +19,5 @@ just_the_docs:
 
 plugins:
   - jekyll-remote-theme
+  - jekyll-seo-tag
+  - jekyll-include-cache
